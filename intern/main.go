@@ -9,14 +9,12 @@ import (
 	"net/http"
 )
 
-func init() {
+func Main() {
+	fmt.Println("Simple REST API for a To-Do List App")
+
 	// Connect to the database
 	database.Connect()
 	database.InitDB()
-}
-
-func Main() {
-	fmt.Println("Simple REST API for a To-Do List App")
 
 	setupRoutes()
 
